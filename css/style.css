@@ -272,55 +272,51 @@ a { color: inherit; }
   font-weight: 500;
 }
 
-/* Experience */
-.job {
-  padding: 32px 0;
+/* Tools & Technologies marquee */
+.tools-marquee {
+  padding: 28px 0;
+  border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+  overflow: hidden;
 }
-.job:last-child { border-bottom: none; padding-bottom: 0; }
-.job:first-child { padding-top: 0; }
-.job-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 16px;
-}
-.job-head h3 {
-  font-family: var(--font-serif);
-  font-weight: 500;
-  font-size: 1.3rem;
-  margin: 0 0 4px;
-}
-.job-company {
-  margin: 0;
+.marquee-label {
+  margin: 0 0 16px;
+  text-align: center;
+  font-size: 0.82rem;
   font-weight: 600;
-  font-size: 0.95rem;
-}
-.job-desc {
-  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
   color: var(--text-muted);
 }
-.job-meta {
+.marquee {
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 2px;
-  font-size: 0.85rem;
-  color: var(--text-muted);
+  width: max-content;
+  animation: marquee-scroll 38s linear infinite;
+}
+.marquee:hover { animation-play-state: paused; }
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-right: 12px;
   white-space: nowrap;
 }
-.job-bullets {
-  margin: 0;
-  padding-left: 20px;
-  color: var(--text-muted);
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+.marquee-track span {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  color: var(--text);
 }
-.job-bullets li { font-size: 0.98rem; }
-.job-bullets li::marker { color: var(--accent); }
+.marquee-dot { color: var(--accent); font-size: 0.8rem; }
+
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee { animation: none; overflow-x: auto; }
+}
 
 /* Projects */
 .projects-section { padding: 64px 0; }
@@ -412,24 +408,6 @@ a { color: inherit; }
   font-style: italic;
 }
 
-/* Skills */
-.tag-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-.tag-list li {
-  padding: 8px 16px;
-  border: 1px solid var(--border);
-  background: var(--bg-elevated);
-  border-radius: 999px;
-  font-size: 0.88rem;
-  font-weight: 500;
-}
-
 /* Contact */
 .contact h2 {
   font-family: var(--font-serif);
@@ -483,8 +461,6 @@ a { color: inherit; }
   .nav-burger { display: flex; }
   .nav-links-mobile.is-open { display: flex; }
   .about-grid { grid-template-columns: 1fr; gap: 32px; }
-  .job-head { flex-direction: column; align-items: flex-start; }
-  .job-meta { align-items: flex-start; }
   .hero {
     padding: 48px 20px 40px;
     flex-direction: column-reverse;
