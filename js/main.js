@@ -43,4 +43,17 @@
   });
 
   document.getElementById("year").textContent = new Date().getFullYear();
+
+  var carousel = document.getElementById("carousel");
+  var prevBtn = document.getElementById("carouselPrev");
+  var nextBtn = document.getElementById("carouselNext");
+  if (carousel && prevBtn && nextBtn) {
+    var scrollByCard = function (direction) {
+      var card = carousel.querySelector(".project-card");
+      var step = card ? card.getBoundingClientRect().width + 20 : 320;
+      carousel.scrollBy({ left: direction * step, behavior: "smooth" });
+    };
+    prevBtn.addEventListener("click", function () { scrollByCard(-1); });
+    nextBtn.addEventListener("click", function () { scrollByCard(1); });
+  }
 })();
