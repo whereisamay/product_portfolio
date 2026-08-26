@@ -170,9 +170,9 @@ a { color: inherit; }
 .hero-text { flex: 1; min-width: 0; }
 .hero-photo {
   flex-shrink: 0;
-  width: 168px;
-  height: 168px;
-  border-radius: 50%;
+  width: 260px;
+  height: 260px;
+  border-radius: 32px;
   overflow: hidden;
   border: 1px solid var(--border);
   background: var(--bg-elevated);
@@ -190,7 +190,7 @@ a { color: inherit; }
   align-items: center;
   justify-content: center;
   font-family: var(--font-serif);
-  font-size: 2.6rem;
+  font-size: 3.6rem;
   font-weight: 500;
   color: var(--accent);
   background: var(--accent-soft);
@@ -292,14 +292,14 @@ a { color: inherit; }
 .marquee {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 38s linear infinite;
+  animation: marquee-scroll 90s linear infinite;
 }
 .marquee:hover { animation-play-state: paused; }
 .marquee-track {
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding-right: 12px;
+  gap: 40px;
+  padding-right: 40px;
   white-space: nowrap;
 }
 .marquee-track span {
@@ -307,7 +307,6 @@ a { color: inherit; }
   font-size: 1.15rem;
   color: var(--text);
 }
-.marquee-dot { color: var(--accent); font-size: 0.8rem; }
 
 @keyframes marquee-scroll {
   from { transform: translateX(0); }
@@ -468,7 +467,7 @@ a { color: inherit; }
     gap: 28px;
   }
   .hero-actions { justify-content: center; }
-  .hero-photo { width: 128px; height: 128px; }
+  .hero-photo { width: 180px; height: 180px; border-radius: 24px; }
   .section { padding: 48px 20px; }
   .projects-section { padding: 48px 0; }
 }
