@@ -6,10 +6,13 @@ plain HTML/CSS/JS, so it can be deployed anywhere that serves static files.
 ## Structure
 
 ```
-index.html      Page markup (hero, about, experience, skills, contact)
-css/style.css   Styles, light/dark theme via CSS variables
-js/main.js      Theme toggle, mobile nav, scroll-reveal animation
-assets/         Static files (resume PDF, etc.)
+index.html                 Page markup (hero, about, experience, skills, contact)
+css/style.css               Styles, light/dark theme via CSS variables
+js/main.js                  Theme toggle, mobile nav, scroll-reveal animation
+assets/                     Static files (resume PDF, etc.)
+presentation/index.html     Interactive slide-deck case study (Google Slides–style)
+presentation/presentation.css
+presentation/presentation.js
 ```
 
 ## Local preview
@@ -50,6 +53,25 @@ static site with `index.html` at the repo root.
 - Swap `assets/Amay_Prabhu_Resume.pdf` to update the downloadable resume
   (keep the same filename, or update the `href` in the "Resume" button).
 - Colors and fonts are CSS variables at the top of `css/style.css`.
+
+## Presentation / case study deck
+
+`presentation/index.html` is a self-contained, keyboard- and swipe-navigable
+slide deck (styled to match the main site) for walking through a single
+project as a case study: intro, problem statement, user &amp; business goals,
+competitor analysis, exploration, the chosen solution, a demo recording,
+impact, and a thank-you slide.
+
+- Edit the slide copy directly in `presentation/index.html` — placeholder
+  text is wrapped in `[brackets]`.
+- To embed your solution recording on slide 10, replace the `iframe`'s
+  `src="about:blank"` with a YouTube/Vimeo/Loom embed URL (or swap the
+  `iframe` for a `<video controls src="…mp4">` tag).
+- Navigate with the on-screen arrows/dots, arrow keys, spacebar, or swipe on
+  mobile. The theme toggle is synced with the main portfolio page.
+- Linked from the "Finmo Payments Plugin" project card on the homepage —
+  update that `href`, or duplicate the `presentation/` folder per project if
+  you want a deck for more than one.
 
 ## Next steps (not in this skeleton)
 
