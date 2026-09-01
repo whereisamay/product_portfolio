@@ -250,6 +250,10 @@ html, .deck-body {
   background: var(--bg-elevated);
 }
 .two-col-card-pain { border-color: var(--accent-soft); }
+.two-col-single {
+  grid-template-columns: 1fr;
+  max-width: 460px;
+}
 .check-list, .pain-list {
   margin: 0;
   padding: 0;
@@ -285,6 +289,10 @@ html, .deck-body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 900px;
+}
+.stat-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 640px;
 }
 .stat-card {
   border: 1px solid var(--border);

@@ -10,9 +10,11 @@ index.html                 Page markup (hero, about, experience, skills, contact
 css/style.css               Styles, light/dark theme via CSS variables
 js/main.js                  Theme toggle, mobile nav, scroll-reveal animation
 assets/                     Static files (resume PDF, etc.)
-presentation/index.html     Interactive slide-deck case study (Google Slides–style)
-presentation/presentation.css
-presentation/presentation.js
+presentation/index.html     Hub page linking to each case study deck
+presentation/hub.css
+presentation/shared.css     Shared deck styling (Google Slides–style engine)
+presentation/shared.js      Shared deck navigation logic
+presentation/<project>/index.html   One folder per case study deck
 ```
 
 ## Local preview
@@ -54,24 +56,30 @@ static site with `index.html` at the repo root.
   (keep the same filename, or update the `href` in the "Resume" button).
 - Colors and fonts are CSS variables at the top of `css/style.css`.
 
-## Presentation / case study deck
+## Presentation / case study decks
 
-`presentation/index.html` is a self-contained, keyboard- and swipe-navigable
-slide deck (styled to match the main site) for walking through a single
-project as a case study: intro, problem statement, user &amp; business goals,
-competitor analysis, exploration, the chosen solution, a demo recording,
-impact, and a thank-you slide.
+`presentation/index.html` is a hub page linking out to one self-contained,
+keyboard- and swipe-navigable slide deck per project (styled to match the
+main site). Each deck lives in its own folder and shares `shared.css` /
+`shared.js` from `presentation/`.
 
-- Edit the slide copy directly in `presentation/index.html` — placeholder
-  text is wrapped in `[brackets]`.
-- To embed your solution recording on slide 10, replace the `iframe`'s
+Current decks:
+- `presentation/partner-analytics-dashboard/`
+- `presentation/payments-agent/`
+- `presentation/outdoor-activity-tracking/`
+
+- Edit the slide copy directly in each deck's `index.html` — placeholder
+  text is wrapped in `[brackets]` for slides not yet filled in.
+- To embed a solution recording on the video slide, replace the `iframe`'s
   `src="about:blank"` with a YouTube/Vimeo/Loom embed URL (or swap the
   `iframe` for a `<video controls src="…mp4">` tag).
 - Navigate with the on-screen arrows/dots, arrow keys, spacebar, or swipe on
   mobile. The theme toggle is synced with the main portfolio page.
-- Linked from the "Finmo Payments Plugin" project card on the homepage —
-  update that `href`, or duplicate the `presentation/` folder per project if
-  you want a deck for more than one.
+- To add a new deck: duplicate an existing project folder, update its
+  content and `#slideTotal`, then add a card for it in `presentation/index.html`.
+- The homepage's project carousel still links its "Finmo Payments Plugin"
+  card to `presentation/index.html` (now the hub) — that card's copy is
+  pending an update to match the real projects above.
 
 ## Next steps (not in this skeleton)
 

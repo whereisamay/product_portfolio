@@ -1,0 +1,91 @@
+.hub-body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.hub-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 24px;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.hub-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--text);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 0.98rem;
+}
+.hub-back:hover { color: var(--accent); }
+
+.hub-main {
+  padding: 72px 24px 96px;
+}
+.hub-head {
+  max-width: 900px;
+  margin: 0 auto 48px;
+}
+.hub-head h1 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: clamp(2rem, 5vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 16px;
+}
+.hub-head p {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+  max-width: 620px;
+  margin: 0;
+}
+
+.hub-grid {
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  background: var(--bg-elevated);
+  text-decoration: none;
+  color: var(--text);
+}
+.hub-card:hover { border-color: var(--accent); }
+.hub-card-year {
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+.hub-card h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 1.3rem;
+  margin: 0;
+}
+.hub-card p {
+  color: var(--text-muted);
+  font-size: 0.94rem;
+  margin: 0;
+  flex: 1;
+}
+.hub-card-cta {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--accent);
+}
