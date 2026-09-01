@@ -77,9 +77,8 @@ Current decks:
   mobile. The theme toggle is synced with the main portfolio page.
 - To add a new deck: duplicate an existing project folder, update its
   content and `#slideTotal`, then add a card for it in `presentation/index.html`.
-- The homepage's project carousel still links its "Finmo Payments Plugin"
-  card to `presentation/index.html` (now the hub) — that card's copy is
-  pending an update to match the real projects above.
+- The homepage's project carousel now links directly to each of the three
+  decks above.
 
 ## Next steps (not in this skeleton)
 
