@@ -319,14 +319,10 @@ a { color: inherit; }
 
 /* Projects */
 .projects-section { padding: 64px 0; }
-.projects-head {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 24px;
-}
+.projects-head { margin-bottom: 24px; }
 .projects-head .section-label { margin: 0; }
-.carousel-controls { display: flex; gap: 8px; }
+
+/* Shared circular icon-button style (also used by the presentation deck nav) */
 .carousel-btn {
   width: 38px;
   height: 38px;
@@ -341,20 +337,13 @@ a { color: inherit; }
 }
 .carousel-btn:hover { border-color: var(--text); }
 
-.carousel {
-  display: flex;
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  padding: 4px 24px 12px;
-  scrollbar-width: none;
 }
-.carousel::-webkit-scrollbar { display: none; }
 
 .project-card {
-  flex: 0 0 auto;
-  width: min(320px, 82vw);
-  scroll-snap-align: start;
   border: 1px solid var(--border);
   border-radius: 14px;
   overflow: hidden;
@@ -399,13 +388,6 @@ a { color: inherit; }
   align-self: flex-start;
 }
 .project-link:hover { text-decoration: underline; }
-
-.projects-note {
-  margin-top: 20px;
-  font-size: 0.82rem;
-  color: var(--text-muted);
-  font-style: italic;
-}
 
 /* Contact */
 .contact h2 {
@@ -470,4 +452,5 @@ a { color: inherit; }
   .hero-photo { width: 180px; height: 180px; border-radius: 24px; }
   .section { padding: 48px 20px; }
   .projects-section { padding: 48px 0; }
+  .projects-grid { grid-template-columns: 1fr; }
 }
