@@ -27,7 +27,7 @@
     </div>
 
     <div class="deck-bar-right">
-      <span class="deck-counter"><span id="slideCurrent">1</span>&nbsp;/&nbsp;<span id="slideTotal">12</span></span>
+      <span class="deck-counter"><span id="slideCurrent">1</span>&nbsp;/&nbsp;<span id="slideTotal">9</span></span>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle color theme">
         <svg id="iconSun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>
         <svg id="iconMoon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79Z"/></svg>
@@ -99,18 +99,16 @@
       <section class="slide" id="slide-5" aria-label="Slide 5">
         <p class="slide-eyebrow">Business Goals</p>
         <h2 class="slide-title">What success looked like for the business</h2>
-        <div class="stat-grid">
+        <div class="stat-grid stat-grid-2">
           <div class="stat-card">
-            <p class="stat-value">[Metric]</p>
-            <p class="stat-label">[e.g. new ICP opened, revenue target, adoption rate]</p>
+            <p class="stat-value">~50,000</p>
+            <p class="stat-label">increase in MAU within the first 2 months</p>
+            <span class="insight-tag">New ICP opened</span>
           </div>
           <div class="stat-card">
-            <p class="stat-value">[Metric]</p>
-            <p class="stat-label">[Goal description]</p>
-          </div>
-          <div class="stat-card">
-            <p class="stat-value">[Metric]</p>
-            <p class="stat-label">[Goal description]</p>
+            <p class="stat-value">5/week</p>
+            <p class="stat-label">activities logged, among power users</p>
+            <span class="insight-tag">Among the power users</span>
           </div>
         </div>
       </section>
@@ -118,94 +116,59 @@
       <!-- 6. Competitor analysis -->
       <section class="slide" id="slide-6" aria-label="Slide 6">
         <p class="slide-eyebrow">Competitor Analysis</p>
-        <h2 class="slide-title">Where we stood in the landscape</h2>
+        <h2 class="slide-title">Feature-by-feature comparison</h2>
         <div class="table-wrap">
           <table class="comp-table">
             <thead>
               <tr>
-                <th>Criteria</th>
+                <th>Feature</th>
                 <th>Strava</th>
                 <th>Nike Run Club</th>
                 <th>Adidas Running</th>
                 <th class="comp-us">StepSetGo</th>
+                <th>Notes</th>
               </tr>
             </thead>
             <tbody>
-              <tr><td>[Criterion one]</td><td>[Value]</td><td>[Value]</td><td>[Value]</td><td class="comp-us">[Value]</td></tr>
-              <tr><td>[Criterion two]</td><td>[Value]</td><td>[Value]</td><td>[Value]</td><td class="comp-us">[Value]</td></tr>
-              <tr><td>[Criterion three]</td><td>[Value]</td><td>[Value]</td><td>[Value]</td><td class="comp-us">[Value]</td></tr>
-              <tr><td>[Criterion four]</td><td>[Value]</td><td>[Value]</td><td>[Value]</td><td class="comp-us">[Value]</td></tr>
+              <tr><td>Option to Set a Goal</td><td>Y</td><td>Y</td><td>Y</td><td class="comp-us">Y</td><td>Required for MVP</td></tr>
+              <tr><td>Audio Feedback</td><td>N</td><td>Y</td><td>Y</td><td class="comp-us">N</td><td>Good to have, parked for v2</td></tr>
+              <tr><td>Live Activity Splits &amp; Route Updates</td><td>Y*</td><td>N</td><td>Y</td><td class="comp-us">Y</td><td>Required for MVP</td></tr>
+              <tr><td>Adding Photos / Social Features</td><td>Y</td><td>Y</td><td>Y</td><td class="comp-us">Y</td><td>Required for MVP</td></tr>
             </tbody>
           </table>
         </div>
       </section>
 
-      <!-- 7. Initial exploration I -->
+      <!-- 7. The solution, in screenshots -->
       <section class="slide" id="slide-7" aria-label="Slide 7">
-        <p class="slide-eyebrow">Initial Exploration</p>
-        <h2 class="slide-title">Directions we considered</h2>
-        <div class="explore-grid">
-          <figure class="explore-card">
-            <div class="explore-thumb" style="--thumb-a:#e08659; --thumb-b:#b4451f;">Concept A</div>
-            <figcaption>[Short description of this direction and its tradeoffs.]</figcaption>
-          </figure>
-          <figure class="explore-card">
-            <div class="explore-thumb" style="--thumb-a:#6b8f71; --thumb-b:#2f4f39;">Concept B</div>
-            <figcaption>[Short description of this direction and its tradeoffs.]</figcaption>
-          </figure>
-          <figure class="explore-card">
-            <div class="explore-thumb" style="--thumb-a:#5b7fa6; --thumb-b:#2c3f57;">Concept C</div>
-            <figcaption>[Short description of this direction and its tradeoffs.]</figcaption>
-          </figure>
-        </div>
-      </section>
-
-      <!-- 8. Initial exploration II -->
-      <section class="slide" id="slide-8" aria-label="Slide 8">
-        <p class="slide-eyebrow">Initial Exploration</p>
-        <h2 class="slide-title">What we learned testing them</h2>
-        <ul class="insight-list">
-          <li><span class="insight-tag">Insight</span>[Finding from user testing, prototyping, or stakeholder review.]</li>
-          <li><span class="insight-tag">Insight</span>[Finding from user testing, prototyping, or stakeholder review.]</li>
-          <li><span class="insight-tag">Insight</span>[Finding from user testing, prototyping, or stakeholder review.]</li>
-        </ul>
-      </section>
-
-      <!-- 9. Deciding the solution -->
-      <section class="slide" id="slide-9" aria-label="Slide 9">
-        <p class="slide-eyebrow">The Decision</p>
-        <h2 class="slide-title">Why we chose this direction</h2>
-        <div class="decision-panel">
-          <p class="decision-choice">[Name the chosen solution direction in one line.]</p>
-          <p class="slide-lede">[2–3 sentences on the deciding factors — feasibility, user signal, business alignment, or timeline.]</p>
-        </div>
-      </section>
-
-      <!-- 10. Embedded recording -->
-      <section class="slide slide-video" id="slide-10" aria-label="Slide 10">
         <p class="slide-eyebrow">The Solution</p>
-        <h2 class="slide-title">See it in action</h2>
-        <div class="video-frame">
-          <!-- Replace the src below with your recording: a YouTube/Vimeo/Loom embed URL,
-               a Google Drive preview URL (https://drive.google.com/file/d/FILE_ID/preview —
-               the file must be shared as "Anyone with the link can view"; the normal
-               drive.google.com/.../view share link will NOT embed), or swap this iframe
-               for a <video controls src="…mp4"> element. -->
-          <iframe
-            src="about:blank"
-            title="Final solution walkthrough"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            loading="lazy"></iframe>
-          <div class="video-placeholder" id="videoPlaceholder">
-            <p>Drop in your recording</p>
-            <p class="video-placeholder-sub">Replace the iframe <code>src</code> in this file with a YouTube, Vimeo, Loom, or Google Drive embed link.</p>
-          </div>
+        <h2 class="slide-title">The experience, end to end</h2>
+        <div class="screens-grid">
+          <!-- TODO: replace each .screen-placeholder with an <img src="…"> of the
+               corresponding screenshot once the image files are added to assets/. -->
+          <figure class="screen-frame">
+            <div class="screen-placeholder">
+              <p>Add screenshot</p>
+            </div>
+            <figcaption>Start a run or ride</figcaption>
+          </figure>
+          <figure class="screen-frame">
+            <div class="screen-placeholder">
+              <p>Add screenshot</p>
+            </div>
+            <figcaption>Live tracking mid-activity</figcaption>
+          </figure>
+          <figure class="screen-frame">
+            <div class="screen-placeholder">
+              <p>Add screenshot</p>
+            </div>
+            <figcaption>Post-activity summary</figcaption>
+          </figure>
         </div>
       </section>
 
-      <!-- 11. Impact -->
-      <section class="slide" id="slide-11" aria-label="Slide 11">
+      <!-- 8. Impact -->
+      <section class="slide" id="slide-8" aria-label="Slide 8">
         <p class="slide-eyebrow">Impact</p>
         <h2 class="slide-title">What changed after launch</h2>
         <div class="stat-grid stat-grid-2">
@@ -220,8 +183,8 @@
         </div>
       </section>
 
-      <!-- 12. Thank you -->
-      <section class="slide slide-thanks" id="slide-12" aria-label="Slide 12">
+      <!-- 9. Thank you -->
+      <section class="slide slide-thanks" id="slide-9" aria-label="Slide 9">
         <p class="slide-eyebrow">Thank You</p>
         <h1 class="slide-title-xl">Questions, thoughts, feedback?</h1>
         <p class="slide-subtitle">I'd love to talk through any part of this in more detail.</p>
