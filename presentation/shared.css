@@ -312,6 +312,7 @@ html, .deck-body {
   color: var(--text-muted);
   font-size: 0.92rem;
 }
+.stat-card .insight-tag { display: inline-block; margin-top: 10px; }
 .impact-note { margin-top: 28px; }
 
 /* Competitor table */
@@ -349,6 +350,10 @@ html, .deck-body {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   max-width: 960px;
+}
+.explore-grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 660px;
 }
 .explore-card {
   margin: 0;
@@ -462,6 +467,76 @@ html, .deck-body {
   border-radius: 4px;
 }
 
+/* Phone-screenshot gallery (e.g. a solution slide shown as screens instead of a recording) */
+.screens-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  max-width: 780px;
+}
+.screen-frame {
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  overflow: hidden;
+  background: var(--bg-elevated);
+}
+.screen-placeholder {
+  aspect-ratio: 9 / 18;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  color: #93928c;
+  background: radial-gradient(circle at 50% 40%, #232327, #101012);
+  font-family: var(--font-serif);
+  font-size: 1rem;
+}
+.screen-frame img {
+  width: 100%;
+  aspect-ratio: 9 / 18;
+  object-fit: cover;
+  display: block;
+}
+.screen-frame figcaption {
+  padding: 12px 14px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--border);
+}
+
+/* Single static-screenshot slide (e.g. a dashboard screenshot standing in for a recording) */
+.image-frame {
+  max-width: 860px;
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  background: var(--bg-elevated);
+}
+.image-frame img { width: 100%; display: block; }
+.image-placeholder {
+  aspect-ratio: 16 / 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+  padding: 24px;
+  color: #d8d6cf;
+  background: radial-gradient(circle at 50% 40%, #232327, #101012);
+}
+.image-placeholder p { margin: 0; font-family: var(--font-serif); font-size: 1.15rem; }
+.image-placeholder-sub {
+  font-family: var(--font-sans) !important;
+  font-size: 0.85rem !important;
+  color: #93928c;
+  max-width: 480px;
+}
+
 /* Thank you slide */
 .slide-thanks { justify-content: center; }
 .thanks-links {
@@ -513,9 +588,10 @@ html, .deck-body {
 @media (max-width: 720px) {
   .deck-back span { display: none; }
   .slide { padding: 32px 22px; }
-  .two-col, .stat-grid, .explore-grid {
+  .two-col, .stat-grid, .explore-grid, .screens-grid {
     grid-template-columns: 1fr;
   }
+  .screen-placeholder, .screen-frame img { aspect-ratio: 16 / 10; }
   .intro-meta { gap: 24px; }
   .deck-counter { display: none; }
 }
