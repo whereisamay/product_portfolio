@@ -158,6 +158,23 @@ html, .deck-body {
 
 /* Slide 1 — Intro */
 .slide-intro { justify-content: center; }
+.slide-intro-media {
+  flex-direction: row;
+  align-items: center;
+  gap: 56px;
+}
+.slide-intro-media .intro-content { flex: 1; min-width: 0; }
+.intro-media {
+  flex: 0 0 auto;
+  width: 220px;
+}
+.intro-media img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+  border: 1px solid var(--border);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+}
 .intro-meta {
   margin: 40px 0 0;
   display: flex;
@@ -588,6 +605,8 @@ html, .deck-body {
 @media (max-width: 720px) {
   .deck-back span { display: none; }
   .slide { padding: 32px 22px; }
+  .slide-intro-media { flex-direction: column-reverse; gap: 28px; }
+  .intro-media { width: 160px; }
   .two-col, .stat-grid, .explore-grid, .screens-grid {
     grid-template-columns: 1fr;
   }
