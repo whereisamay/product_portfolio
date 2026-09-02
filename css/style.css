@@ -244,11 +244,7 @@ a { color: inherit; }
   grid-template-columns: 1.4fr 1fr;
   gap: 48px;
 }
-.about-text {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  margin: 0;
-}
+.about-grid-split { grid-template-columns: 1fr 1fr; }
 .about-facts {
   margin: 0;
   display: flex;
@@ -272,33 +268,30 @@ a { color: inherit; }
   font-weight: 500;
 }
 
-/* About — career timeline */
-.about-timeline { margin-top: 48px; }
-.timeline-row {
+/* About — career timeline (vertical) */
+.timeline-col {
   position: relative;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 12px;
+  flex-direction: column;
+  gap: 32px;
 }
-.timeline-row::before {
+.timeline-col::before {
   content: "";
   position: absolute;
   top: 22px;
-  left: 0;
-  right: 0;
-  border-top: 1px dashed var(--border);
+  bottom: 22px;
+  left: 22px;
+  border-left: 1px dashed var(--border);
 }
-.timeline-stop {
+.timeline-item {
   position: relative;
-  flex: 1;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 10px;
-  text-align: center;
+  gap: 16px;
 }
 .timeline-badge {
+  flex: 0 0 auto;
+  position: relative;
   width: 44px;
   height: 44px;
   border-radius: 12px;
@@ -310,6 +303,11 @@ a { color: inherit; }
   font-size: 0.8rem;
   color: #fff;
   box-shadow: 0 0 0 6px var(--bg);
+}
+.timeline-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 .timeline-company {
   font-weight: 600;
@@ -501,15 +499,4 @@ a { color: inherit; }
   .section { padding: 48px 20px; }
   .projects-section { padding: 48px 0; }
   .projects-grid { grid-template-columns: 1fr; }
-  .timeline-row { flex-direction: column; align-items: center; gap: 28px; }
-  .timeline-row::before {
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    right: auto;
-    width: 0;
-    border-top: none;
-    border-left: 1px dashed var(--border);
-    transform: translateX(-50%);
-  }
 }
